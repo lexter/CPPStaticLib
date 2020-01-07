@@ -8,7 +8,11 @@
 
 import Foundation
 
+public typealias Closure = (Double, Double) -> Double
+
 public class Arithmetic {
+    
+    public static var callback: Closure?
     
     public static func Add(_ a: Double, _ b:Double) -> Double {
         return doAdd(a, b)
@@ -26,11 +30,11 @@ public class Arithmetic {
         return doDivide(a, b)
     }
     
-//    public static func Custom(  _ a: Double,
-//                                _ b: Double,
-//                                _ callback: @escaping (Double, Double) -> Double
-//                             ) -> Double {
-//        return doCustom(a, b, callback)
-//    }
-    
+    public static func Custom(  _ a: Double,
+                                _ b: Double
+                             ) -> Double {
+        return doCustom(a, b) { (x,y) -> Double in
+            return Arithmetic.callback!(x,y)
+        }
+    }
 }

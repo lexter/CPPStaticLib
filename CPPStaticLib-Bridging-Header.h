@@ -8,4 +8,4 @@ double doAdd(double a, double b);
 double doSubtract(double a, double b);
 double doMultiply(double a, double b);
 double doDivide(double a, double b);
-//double doCustom(double a, double b, double (*callback)(double, double));
+double doCustom(double a, double b, double(*callback)(double, double));

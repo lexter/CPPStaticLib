@@ -1,3 +1,7 @@
+
+#ifndef A_hpp
+#define A_hpp
+
 class A
 {
 public:
@@ -6,3 +10,5 @@ public:
 private:
   int m_Int;
 };
+
+#endif

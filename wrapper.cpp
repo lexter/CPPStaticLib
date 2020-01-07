@@ -41,7 +41,8 @@ extern "C" double doDivide(double a, double b)
     return MathFuncs::MyMathFuncs::Divide(a,b);
 }
 
-//extern "C" double doCustom(double a, double b, double (*callback)(double, double))
-//{
-//    return MathFuncs::MyMathFuncs::Custom(a, b, callback);
-//}
+extern "C" double doCustom(double a, double b, std::function<double(double, double)> callback)
+{
+    return MathFuncs::MyMathFuncs::Custom(a, b, callback);
+}
+

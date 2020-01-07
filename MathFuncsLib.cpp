@@ -4,10 +4,6 @@
 
 #include "MathFuncsLib.h"
 
-#include <stdexcept>
-
-using namespace std;
-
 namespace MathFuncs
 {
     double MyMathFuncs::Add(double a, double b)
@@ -30,10 +26,10 @@ namespace MathFuncs
         return a / b;
     }
     
-//    double MyMathFuncs::Custom(double a, double b, std::function<double(double, double)> callback)
-//    {
-//    	return callback(a,b);
-//    }
+    double MyMathFuncs::Custom(double a, double b, std::function<double(double, double)> callback)
+    {
+    	return callback(a,b);
+    }
 }
 
 

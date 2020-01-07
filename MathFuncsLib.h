@@ -1,6 +1,9 @@
 // MathFuncsLib.h
 
-#include<iostream>
+#include <iostream>
+
+#ifndef MathFuncs_h
+#define MathFuncs_h
 
 using namespace std;
 
@@ -22,6 +25,8 @@ namespace MathFuncs
         static double Divide(double a, double b);
 
         // Returns answer.
-//        static double Custom(double a, double b, std::function<double(double, double)> callback);
+        static double Custom(double a, double b, std::function<double(double, double)> callback);
     };
 }
+
+#endif
