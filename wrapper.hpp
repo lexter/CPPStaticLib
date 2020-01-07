@@ -9,6 +9,7 @@
 #ifndef wrapper_hpp
 #define wrapper_hpp
 
+#include <exception>
 #include <stdio.h>
 
 #endif /* wrapper_hpp */
