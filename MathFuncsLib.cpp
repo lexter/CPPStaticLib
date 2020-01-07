@@ -26,7 +26,7 @@ namespace MathFuncs
         return a / b;
     }
     
-    double MyMathFuncs::Custom(double a, double b, std::function<double(double, double)> callback)
+    double MyMathFuncs::Custom(double a, double b, double(*callback)(double, double))
     {
     	return callback(a,b);
     }
