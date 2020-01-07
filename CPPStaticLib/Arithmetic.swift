@@ -10,6 +10,7 @@ import Foundation
 
 
 // Reference: https://forums.swift.org/t/wrapping-c-callbacks-in-swift-closures/29047/3
+// Fix to error: a C function pointer cannot be formed from a closure that captures context
 public typealias Closure = @convention(c) (Double, Double) -> Double
 
 public class Arithmetic {
