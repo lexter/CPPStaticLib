@@ -8,11 +8,11 @@
 
 import Foundation
 
-public typealias Closure = (Double, Double) -> Double
+
+// Reference: https://forums.swift.org/t/wrapping-c-callbacks-in-swift-closures/29047/3
+public typealias Closure = @convention(c) (Double, Double) -> Double
 
 public class Arithmetic {
-    
-    public static var callback: Closure?
     
     public static func Add(_ a: Double, _ b:Double) -> Double {
         return doAdd(a, b)
@@ -31,10 +31,9 @@ public class Arithmetic {
     }
     
     public static func Custom(  _ a: Double,
-                                _ b: Double
+                                _ b: Double,
+                                _ callback: @escaping Closure
                              ) -> Double {
-        return doCustom(a, b) { (x,y) -> Double in
-            return Arithmetic.callback!(x,y)
-        }
+        return doCustom(a, b, callback)
     }
 }
